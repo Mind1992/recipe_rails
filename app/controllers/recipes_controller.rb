@@ -24,4 +24,9 @@ class RecipesController < ApplicationController
     render('recipes/show.html.erb')
   end
 
+  def edit
+    @recipe = Recipe.find(params[:id])
+    render('recipes/edit.html.erb')
+  end
+
 end
