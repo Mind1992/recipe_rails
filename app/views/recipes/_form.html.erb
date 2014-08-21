@@ -1,5 +1,5 @@
 <label for="recipe_name">Name</label>
-<input id="recipe_name" name="recipe[name]" type="text" value="<% @recipe.name %>">
+<input id="recipe_name" name="recipe[name]" type="text" value="<%= @recipe.name %>">
 <label for="recipe_description">Description</label>
-<textarea name="recipe[description]" type="text", value="<% @recipe.description %>" rows="10" cols="55"></textarea>
+<textarea name="recipe[description]" type="text", rows="10" cols="55"><%= @recipe.description %></textarea>
 
