@@ -7,7 +7,7 @@ class RecipesController < ApplicationController
   def create
     @recipe = Recipe.new(params[:recipe])
     if @recipe.save
-      flash[:notice] = "Your recipe was added."
+      flash[:notice] = "New recipe was added."
       redirect_to("/recipes/#{@recipe.id}")
     else
       render("recipes/new.html.erb")
@@ -32,7 +32,7 @@ class RecipesController < ApplicationController
   def update
     @recipe = Recipe.find(params[:id])
     if @recipe.update(params[:recipe])
-      flash[:notice] = "Your recipe was updated."
+      flash[:notice] = "The recipe was updated."
       redirect_to("/recipes/#{@recipe.id}")
     else
       render("recipes/edit.html.erb")
@@ -42,7 +42,7 @@ class RecipesController < ApplicationController
   def destroy
     @recipe = Recipe.find(params[:id])
     if @recipe.destroy
-      flash[:notice] = "Your recipe was deleted."
+      flash[:notice] = "The recipe was deleted."
       redirect_to("/recipes")
     end
   end
