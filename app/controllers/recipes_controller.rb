@@ -7,6 +7,7 @@ class RecipesController < ApplicationController
   def create
     @recipe = Recipe.new(params[:recipe])
     if @recipe.save
+      flash[:notice] = "You recipe was added."
       redirect_to("/recipes/#{@recipe.id}")
     else
       render("recipes/new.html.erb")
