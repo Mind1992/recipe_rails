@@ -1,0 +1,17 @@
+<h1>New Recipe</h1>
+<% if @recipe.errors.any? %>
+  <h3>Please fix these errors:</h3>
+  <ul>
+    <% @recipe.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+      <% end %>
+  </ul>
+<% end %>
+
+<form action="/recipes" method="post">
+  <label for="recipe_name">Name</label>
+  <input id="recipe_name" name="recipe[name]" type="text" value="<% @recipe.name %>">
+  <label for="recipe_description">Description</label>
+  <textarea name="recipe[description]" type="text", value="<% @recipe.description %>" rows="10" cols="55"></textarea>
+  <button type="submit">Add Recipe</button>
+</form>
