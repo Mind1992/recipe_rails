@@ -1,0 +1,7 @@
+development:
+  adapter: postgresql
+  database: recipes_rails_development
+
+test:
+  adapter: postgresql
+  database: recipes_rails_test
