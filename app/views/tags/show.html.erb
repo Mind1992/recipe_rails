@@ -1,4 +1,8 @@
 <% content_for(:title, "New tag | Tags") %>
 <h1><%= @tag.name %></h1>
 <p><a href="/tags/<%= @tag.id %>/edit">Edit</a></p>
+<p><a href="/tags/<%= @tag.id %>"
+  data-confirm="Are you sure?"
+  data-method="delete"
+  rel="nofollow">Delete</a></p>
 <p><a href="/recipes">Go to homepage</a></p>

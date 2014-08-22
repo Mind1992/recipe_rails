@@ -33,4 +33,12 @@ class TagsController < ApplicationController
   		render("tags/edit.html.erb")
   	end
   end
+
+  def destroy
+  	@tag = Tag.find(params[:id])
+    if @tag.destroy
+      flash[:notice] = "The tag was deleted."
+      redirect_to("/recipes")
+    end
+  end  
 end
