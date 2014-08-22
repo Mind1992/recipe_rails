@@ -8,4 +8,9 @@ class TagsController < ApplicationController
       render("tags/new.html.erb")
     end
   end
+
+  def new
+  	@tag = Tag.new
+  	render("tags/new.html.erb")
+  end
 end
