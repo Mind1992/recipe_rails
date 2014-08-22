@@ -1,4 +1,4 @@
 describe Tag do
   it {should validate_presence_of :name}
-  it {should belong_to :recipe}
+  it {should have_and_belong_to_many :recipe}
 end
