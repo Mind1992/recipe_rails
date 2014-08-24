@@ -1,7 +1,7 @@
 <% content_for(:title, "Add tag | Tags")%>
 <h1>New Tag</h1>
 <%= render('layouts/errors', :object => @tag ) %>
-<form action="/tags" method="post">
+<form action="/tags" method="post" class="form-horizontal" role="form">
 	<%= render('form') %>
-	<button type="submit">Add Tag</button>
+	<button type="submit" class="btn btn-success">Add Tag</button>
 </form>

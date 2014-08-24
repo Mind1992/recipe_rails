@@ -1,7 +1,7 @@
 <% content_for(:title, "Add recipe | Recipes")%>
 <h1>New Recipe</h1>
 <%= render('layouts/errors', :object => @recipe ) %>
-<form action="/recipes" method="post">
+<form action="/recipes" method="post" class="form-horizontal" role="form">
   <%= render('form') %>
-  <button type="submit">Add Recipe</button>
+  <button type="submit" class="btn btn-success">Add Recipe</button>
 </form>
