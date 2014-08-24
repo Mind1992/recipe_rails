@@ -14,7 +14,7 @@
 	<div class="form-group">
 		<label for="tag_id" class="col-sm-2 control-label">Tag</label>
 		<div class="col-sm-10">
-			<select name="tag_id">
+			<select name="tag_id" class="form-control">
     		<% Tag.all.each do |tag| %>
       	<option value="<%= tag.id %>"><%= tag.name %></option>
     		<% end %>
